@@ -21,6 +21,24 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
+---
+server:
+  port: 8001
+spring:
+  profiles: test
+  application:
+    name: microservicecloud-config-dept-client
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.git.mm.mysql.Driver
+    url: jdbc:mysql://123.56.84.228:3306/cloudDB01
+    username: root
+    password: 123456
+    bcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
 
 
 eureka:
